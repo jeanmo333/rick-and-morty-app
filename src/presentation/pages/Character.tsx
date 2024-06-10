@@ -1,7 +1,7 @@
-import React from 'react';
+
 import CharacterDetail from '../components/CharacterDetail';
 
-const Character: React.FC = () => {
+const Character = () => {
   return <CharacterDetail />;
 };
 
