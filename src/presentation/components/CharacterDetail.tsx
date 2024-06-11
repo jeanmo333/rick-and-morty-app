@@ -32,7 +32,9 @@ const CharacterDetail = () => {
 
      if (loading) return <Loading/>;
 
-     if (!character) return <NotFound content="Personaje no existe"/>;
+     if (!character) return <div className='w-11/12 mx-auto'> 
+                                <NotFound title="Personaje no existe" showButtom={true}/>
+                             </div>;
 
   return (
     <div className='mb-8'>

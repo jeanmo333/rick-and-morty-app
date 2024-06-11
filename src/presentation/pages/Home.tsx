@@ -6,7 +6,18 @@ import { getCharacters } from '../../application/useCases/getCharacters';
 const Home = () => {
     const [characters, setCharacters] = useState<Character[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
-  
+
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //       const characters = await getCharacters();
+    //       setCharacters(characters);
+    //       setLoading(false);
+    //     };
+    //     fetchData();
+    //   }, []);
+
+
     useEffect(() => {
       const fetchData = async () => {
         try {
@@ -22,7 +33,6 @@ const Home = () => {
       };
       fetchData();
     }, []);
-  
 
   return (
     <div>
