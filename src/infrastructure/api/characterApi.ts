@@ -1,15 +1,14 @@
-import axios from 'axios';
-import { Character } from '../../domain/models/Character';
 
-const API_URL = 'https://rickandmortyapi.com/api';
+import { Character } from '../../domain/models/Character';
+import axiosApi from '../sources/AxiosApi';
 
 
 export const fetchCharacters = async (): Promise<Character[]> => {
-  const response = await axios.get<{ results: Character[] }>(`${API_URL}/character`);
+  const response = await axiosApi.get<{ results: Character[] }>(`/character`);
   return response.data.results;
 };
 
 export const fetchCharacterById = async (id: number): Promise<Character> => {
-  const response = await axios.get<Character>(`${API_URL}/character/${id}`);
+  const response = await axiosApi.get<Character>(`/character/${id}`);
   return response.data;
 };

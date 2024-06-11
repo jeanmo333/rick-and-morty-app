@@ -6,14 +6,16 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 ## Pasos para contenedor docker en DEV
 
-1. Clonar el repositorio `git clone <url del repositorio>`
+1. Debe tener corriendo el docker desktop
 
-2. Instalar dependencias  `npm install`
+2. Clonar el repositorio `git clone <url del repositorio>`
 
-3. Crear el imagen de docker de la app y correr el contenedor en DEV con el archivo docker-compose.dev
+3. Instalar dependencias  `npm install`
+
+4. Crear el imagen de docker de la app y correr el contenedor en DEV con el archivo docker-compose.dev
 `docker-compose -f docker-compose.dev.yml up --build` tambien se puede hacer de manera detached `docker-compose -f docker-compose.dev.yml up --build -d` con este comando puede hacer cambios en el codigo fuente y van a reflejar dentro del contenedor docker, gracias al puente que hay entre el codigo fuente y el contenedor docker en el archivo docker-compose.
 
-4. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+5. Abrir una pestana de un navegador, copiar y pegar el siguiente url
 `http://localhost:5173` 
 
 
@@ -21,14 +23,30 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 ## Pasos para contenedor docker en PROD
 
+1. Debe tener corriendo el docker desktop
+
+2. Clonar el repositorio `git clone <url del repositorio>`
+
+3. Instalar dependencias  `npm install`
+
+4. Crear el imagen de docker de la app y correr el contenedor en PROD con el archivo docker-compose.prod `docker-compose -f docker-compose.prod.yml up --build` , tambien se puede hacer de manera detached `docker-compose -f docker-compose.prod.yml up --build -d`
+
+5. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+`http://localhost` o `http://<ip del servidor>`
+
+
+
+## Pasos para ambiente vite DEV
+
 1. Clonar el repositorio `git clone <url del repositorio>`
 
 2. Instalar dependencias  `npm install`
 
-3. Crear el imagen de docker de la app y correr el contenedor en PROD con el archivo docker-compose.prod `docker-compose -f docker-compose.prod.yml up --build` , tambien se puede hacer de manera detached `docker-compose -f docker-compose.prod.yml up --build -d`
+3. Levantar la app `npm run dev`
 
 4. Abrir una pestana de un navegador, copiar y pegar el siguiente url
-`http://localhost` o `http://<ip del servidor>`
+`http://localhost:5173`
+
 
 
 
@@ -69,6 +87,7 @@ El proyecto está organizado en varias capas, cada una con su propia responsabil
   - **infrastructure/**
     - **api/**: Configuración y lógica relacionada con la API externa (por ejemplo, Axios).
     - **repositories/**: Implementaciones de los repositorios definidos en la capa de aplicación.
+    - **sources/**: Configuraciones y adaptadores de api externas(ejemplo: axios, etc...).
   - **presentation/**
     - **components/**: componentes de la interfaz de usuario que se puede usar las paginas o otros componentes.
     - **routes/**: Configuración de las rutas de la aplicación (por ejemplo, React Router dom).
