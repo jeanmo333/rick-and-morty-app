@@ -73,6 +73,9 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 - [Docker](https://www.docker.com/)
 
+- [Git](https://git-scm.com/)
+
+
 
 
 
