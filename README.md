@@ -40,11 +40,13 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 1. Clonar el repositorio `git clone <url del repositorio>`
 
-2. Instalar dependencias  `npm install`
+2. Nevegar a la carpeta del proyecto.
 
-3. Levantar la app `npm run dev`
+3. Instalar dependencias  `npm install`
 
-4. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+4. Levantar la app `npm run dev`
+
+5. Abrir una pestana de un navegador, copiar y pegar el siguiente url
 `http://localhost:5173`
 
 
