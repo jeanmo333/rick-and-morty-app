@@ -10,12 +10,14 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 2. Clonar el repositorio `git clone <url del repositorio>`
 
-3. Instalar dependencias  `npm install`
+3. Nevegar a la carpeta del proyecto.
 
-4. Crear el imagen de docker de la app y correr el contenedor en DEV con el archivo docker-compose.dev
+4. Instalar dependencias  `npm install`
+
+5. Crear el imagen de docker de la app y correr el contenedor en DEV con el archivo docker-compose.dev
 `docker-compose -f docker-compose.dev.yml up --build` tambien se puede hacer de manera detached `docker-compose -f docker-compose.dev.yml up --build -d` con este comando puede hacer cambios en el codigo fuente y van a reflejar dentro del contenedor docker, gracias al puente que hay entre el codigo fuente y el contenedor docker en el archivo docker-compose.
 
-5. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+6. Abrir una pestana de un navegador, copiar y pegar el siguiente url
 `http://localhost:5173` 
 
 
@@ -27,11 +29,13 @@ Esta es una aplicación web para explorar información sobre los personajes de l
 
 2. Clonar el repositorio `git clone <url del repositorio>`
 
-3. Instalar dependencias  `npm install`
+3. Nevegar a la carpeta del proyecto.
 
-4. Crear el imagen de docker de la app y correr el contenedor en PROD con el archivo docker-compose.prod `docker-compose -f docker-compose.prod.yml up --build` , tambien se puede hacer de manera detached `docker-compose -f docker-compose.prod.yml up --build -d`
+4. Instalar dependencias  `npm install`
 
-5. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+5. Crear el imagen de docker de la app y correr el contenedor en PROD con el archivo docker-compose.prod `docker-compose -f docker-compose.prod.yml up --build` , tambien se puede hacer de manera detached `docker-compose -f docker-compose.prod.yml up --build -d`
+
+6. Abrir una pestana de un navegador, copiar y pegar el siguiente url
 `http://localhost` o `http://<ip del servidor>`
 
 
