@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  rick-and-morty-app:
+    build:
+      context: .
+      dockerfile: dockerfile.dev
+    container_name: rick-and-morty-app-dev
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - '5173:5173'

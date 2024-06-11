@@ -46,7 +46,7 @@ type Props = {
 
   return (
         <div className="w-11/12 mx-auto mb-10">
-        <h1 className="text-3xl font-bold text-center my-6">Rick and Morty App</h1>
+        <h1 className="text-3xl font-bold text-center my-6">Rick and Morty App!!!!</h1>
 
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <StatusFilter status={status} onStatusChange={setStatus} />

@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  rick-and-morty-app:
+    build:
+      context: .
+      dockerfile: dockerfile.prod
+    container_name: rick-and-morty-app-production
+    ports:
+      - '80:80'
+    restart: always
+    environment:
+      NODE_ENV: production

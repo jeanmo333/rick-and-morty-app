@@ -1,9 +1,0 @@
-services:
-  react-app:
-    build: .
-    container_name: rick-and-morty-app-container
-    volumes:
-      - .:/app
-      - /app/node_modules
-    ports:
-      - '5173:5173'
