@@ -43,11 +43,10 @@ type Props = {
 
   if (loading) return <Loading/>;
 
- //if (filteredCharacters.length === 0) return <NotFound content='No hay Personajes'/>
 
   return (
         <div className="w-11/12 mx-auto mb-10">
-        <h1 className="text-3xl font-bold text-center my-6">Rick and Morty APP</h1>
+        <h1 className="text-3xl font-bold text-center my-6">Rick and Morty App</h1>
 
         <div className="flex flex-col md:flex-row justify-between items-center mb-6">
             <StatusFilter status={status} onStatusChange={setStatus} />
@@ -70,7 +69,7 @@ type Props = {
                     <Link to={`/character/${character.id}`}>
                         <img src={character.image} alt={character.name} className="w-full h-auto rounded-lg object-contain" />
                         <p className="mt-2 text-center">{character.name}</p>
-                        <p className="text-center text-sm text-gray-500">{character.gender}</p>
+                        {/* <p className="text-center text-sm text-gray-500">{character.gender}</p> */}
                     </Link>
                     </li>
                 ))}
