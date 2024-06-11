@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Rick and Morty App
 
-Currently, two official plugins are available:
+Esta es una aplicación web para explorar información sobre los personajes de la serie animada "Rick and Morty". La aplicación consume datos de la API de Rick and Morty y muestra una lista de personajes, detalles de cada personaje y filtros por estado y especie. Se puede correr la aplicación en desarrollo desde el contenedor docker o desde el ambiente vite que viene por defecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Pasos para contenedor docker
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clonar el repositorio `git clone <url del repositorio>`
 
-- Configure the top-level `parserOptions` property like this:
+2. Instalar dependencias  `npm install`
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Crear el imagen de docker de la app y correr el contenedor a base del archivo docker-compose
+`docker-compose up --build` con este comando puede hacer cambios en el codigo fuente y van a reflejar dentro del contenedor docker, gracias al puente que hay entre el codigo fuente y el contenedor docker en el archivo docker-compose.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+4. Abrir una pestana de un navegador, copiar y pegar el siguiente url
+`http://localhost:5173` 
+
+
