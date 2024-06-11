@@ -8,15 +8,6 @@ const Home = () => {
     const [loading, setLoading] = useState<boolean>(false);
 
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //       const characters = await getCharacters();
-    //       setCharacters(characters);
-    //       setLoading(false);
-    //     };
-    //     fetchData();
-    //   }, []);
-
 
     useEffect(() => {
       const fetchData = async () => {
